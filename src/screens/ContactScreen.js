@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         marginTop: 4,
         color: theme.colors.secondaryText,
-        textAlign: 'end',
+        textAlign: 'right',
         justifyContent: 'flex-end',
     },
 })

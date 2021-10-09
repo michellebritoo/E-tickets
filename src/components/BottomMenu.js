@@ -29,7 +29,7 @@ export default function BottomMenu({navigation}) {
 const styles = StyleSheet.create({
     bottom: {
         flexDirection: 'row',
-        position: 'fixed',
+        position: 'absolute',
         bottom: 0,
         color: 'red',
         justifyContent: 'space-between',
