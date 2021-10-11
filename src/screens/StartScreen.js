@@ -31,23 +31,23 @@ export default function StartScreen({ navigation }) {
 const styles = StyleSheet.create({
 
 logo: {
-  marginTop: "-5vh",
-  width: '325px',
-  height: '280px'
+  marginTop: 0,
+  width: 325,
+  height: 280
 },
 welcome:{
-  marginTop: "-5vh",
-  fontSize: '1.5rem'
+  marginTop: -10,
+  fontSize: 24
 },
 logorock: {
-  marginTop: "5vh",
-  width: '400px',
-  height: '200px',
+  marginTop: 0,
+  width: 400,
+  height: 200,
 },
 description:{
     width: "80%",
-    marginTop: "5vh",
-    fontSize: '1rem',
+    marginTop: 5,
+    fontSize: 16,
     textAlign: 'justify'
 }
 })

@@ -7,7 +7,7 @@ import {
   ContactScreen,
   StartScreen,
   EventsScreen,
-  NovoArquivo
+  CheckoutScreen
 } from './src/screens'
 
 
@@ -21,6 +21,7 @@ export default function App() {
             <Stack.Screen name="ContactScreen" component={ContactScreen} />
             <Stack.Screen name="StartScreen" component={StartScreen} />
             <Stack.Screen name="EventsScreen" component={EventsScreen} />
+            <Stack.Screen name="CheckoutScreen" component={CheckoutScreen} />
           </Stack.Navigator>
         </NavigationContainer>
       </Provider>
