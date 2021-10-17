@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState } from 'react'
 import { View } from 'react-native'
 import { Text } from 'react-native-paper'
 import { StyleSheet } from 'react-native'
@@ -11,6 +12,12 @@ import Button from '../components/Button'
 
 export default function DetailsScreen({ route, navigation }) {
   const { name, description, price, image } = route.params;
+  const [phone, setPhone] = useState({ value: '', error: '' })
+
+  function total(num){
+    return price * num
+  }
+
   return (
     <Background>
       <Header>
@@ -27,7 +34,11 @@ export default function DetailsScreen({ route, navigation }) {
           <TextInput
             label="Quantidade"
             returnKeyType="next"
+            value={phone.value}
+            onChangeText={(text) => setPhone({ value: text, error: '' })}
           />
+
+          <Text>Total: R$ {total(phone.value)}</Text>
 
           <Button
             mode="contained"
@@ -40,7 +51,6 @@ export default function DetailsScreen({ route, navigation }) {
     </Background>
   );
 }
-
 const styles = StyleSheet.create({
   bg: {
     width: 300,
