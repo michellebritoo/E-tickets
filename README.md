@@ -1,5 +1,11 @@
 # Bem Vindo
 
-## Projeto Ajudaê
+## Projeto E-tickets
 
-Projeto em ReactNative do Ajudaê
+### Disciplina: Tópicos especiais em Sistemas de Informação
+
+### Autores:
+- Alison Aguirres
+- Carlos Wallauer
+- Guilherme Staffen
+- Michelle Brito
