@@ -7,6 +7,7 @@ import BackButtonLight from '../components/BackButtonLight'
 import FormTitle from '../components/FormTitle'
 import Background from '../components/Background'
 import TextInput from '../components/TextInput'
+import Button from '../components/Button'
 
 export default function DetailsScreen({ route, navigation }) {
   const { name, description, price, image } = route.params;
@@ -19,12 +20,20 @@ export default function DetailsScreen({ route, navigation }) {
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
         <View style={styles.bg}>
           <FormTitle> {JSON.stringify(name)}</FormTitle>
+
           <Text>{JSON.stringify(description)}</Text>
           <Text>Preço: R$ {JSON.stringify(price)}</Text>
+
           <TextInput
-                    label="Quantidade"
-                    returnKeyType="next"
-                />
+            label="Quantidade"
+            returnKeyType="next"
+          />
+
+          <Button
+            mode="contained"
+            onPress={() => navigation.navigate('EventsScreen')}>
+            COMPRAR
+          </Button>
         </View>
 
       </View>
