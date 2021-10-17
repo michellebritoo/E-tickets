@@ -9,20 +9,31 @@ import Background from '../components/Background'
 
 export default function DetailsScreen({ route, navigation }) {
   const { name, description, price, image } = route.params;
-  return (     
+  return (
     <Background>
       <Header>
         <BackButtonLight goBack={navigation.goBack} />
-      </Header> 
-        
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>      
-      <FormTitle> {JSON.stringify(name)}</FormTitle>
-      <Text>name: {JSON.stringify(name)}</Text>
-      <Text>description: {JSON.stringify(description)}</Text>
-      <Text>price: {JSON.stringify(price)}</Text>
-      <Text>image: {JSON.stringify(image)}</Text>
-    </View>
+      </Header>
+
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <View style={styles.bg}>
+          <FormTitle> {JSON.stringify(name)}</FormTitle>
+          <Text>{JSON.stringify(description)}</Text>
+          <Text>Preço: R$ {JSON.stringify(price)}</Text>
+        </View>
+
+      </View>
     </Background>
   );
 }
 
+const styles = StyleSheet.create({
+  bg: {
+    width: 300,
+    borderColor: 'black',
+    borderWidth: 2,
+    borderRadius: 15,
+    padding: 5,
+    margin: 5
+  }
+})
