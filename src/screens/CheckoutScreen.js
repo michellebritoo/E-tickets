@@ -6,6 +6,7 @@ import Header from '../components/Header'
 import BackButtonLight from '../components/BackButtonLight'
 import FormTitle from '../components/FormTitle'
 import Background from '../components/Background'
+import TextInput from '../components/TextInput'
 
 export default function DetailsScreen({ route, navigation }) {
   const { name, description, price, image } = route.params;
@@ -20,6 +21,10 @@ export default function DetailsScreen({ route, navigation }) {
           <FormTitle> {JSON.stringify(name)}</FormTitle>
           <Text>{JSON.stringify(description)}</Text>
           <Text>Preço: R$ {JSON.stringify(price)}</Text>
+          <TextInput
+                    label="Quantidade"
+                    returnKeyType="next"
+                />
         </View>
 
       </View>
